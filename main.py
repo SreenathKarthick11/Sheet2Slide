@@ -1,23 +1,8 @@
-from src.excel_reader import (
-    load_excel,
-    summarize_dataset
-)
-
-from src.analyzer import (
-    analyze_data
-)
-
-from src.chart_generator import (
-    generate_charts
-)
-
-from src.insight_generator import (
-    generate_insights
-)
-
-from src.ppt_generator import (
-    create_ppt
-)
+from src.excel_reader import (load_excel,summarize_dataset)
+from src.analyzer import (analyze_data)
+from src.chart_generator import (generate_charts)
+from src.insight_generator import (generate_insights)
+from src.ppt_generator import (create_ppt)
 
 
 EXCEL_FILE = "data/sample.xlsx"
@@ -43,9 +28,7 @@ def main():
 
     print("Generating insights...")
 
-    insights = generate_insights(
-        analysis
-    )
+    insights = generate_insights(summary, analysis)
 
     print("Creating PowerPoint...")
 

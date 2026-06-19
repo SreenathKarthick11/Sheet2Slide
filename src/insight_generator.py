@@ -1,16 +1,30 @@
-def generate_insights(analysis: dict):
+from langchain_ollama import ChatOllama
 
-    insights = []
+llm = ChatOllama(
+    model="qwen2.5:3b",
+    temperature=0
+)
 
-    for column, stats in analysis.items():
+def generate_insights(summary,analysis):
 
-        insight = (
-            f"{column}: "
-            f"average={stats['mean']}, "
-            f"max={stats['max']}, "
-            f"min={stats['min']}."
-        )
+    prompt = f"""
+        You are a business analyst.
 
-        insights.append(insight)
+        Dataset Summary:
+        {summary}
 
-    return insights
+        Statistics:
+        {analysis}
+
+        Generate:
+
+        1. Key findings
+        2. Trends
+        3. Risks
+
+        Keep it concise.
+        """
+
+    response = llm.invoke(prompt)
+
+    return response.content
