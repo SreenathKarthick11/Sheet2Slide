@@ -123,7 +123,7 @@ def create_ppt(
 
     body = slide.placeholders[1]
 
-    body.text = "\n".join(insights)
+    body.text = insights
 
     prs.save(OUTPUT_FILE)
 

@@ -22,6 +22,8 @@ def generate_insights(summary,analysis):
         2. Trends
         3. Risks
 
+        just the insights, no explanations. plain text, no markdown.
+
         Keep it concise.
         """
 
