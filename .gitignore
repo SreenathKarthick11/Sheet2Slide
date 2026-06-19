@@ -2,3 +2,4 @@
 
 .venv/
 output/
+_pycache__/
