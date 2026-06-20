@@ -13,7 +13,8 @@ def create_ppt(
     summary,
     analysis,
     charts,
-    insights
+    slide_plan,
+    insights=""
 ):
 
     OUTPUT_FILE.parent.mkdir(

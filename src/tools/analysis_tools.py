@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def analyze_data(df: pd.DataFrame) -> dict:
+def numeric_summary(df: pd.DataFrame) -> dict:
 
     numeric_cols = df.select_dtypes(include="number").columns
 

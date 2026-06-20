@@ -6,7 +6,7 @@ import pandas as pd
 OUTPUT_DIR = Path("output/charts")
 
 
-def generate_charts(df: pd.DataFrame):
+def generate_charts_from_plan(df: pd.DataFrame):
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
